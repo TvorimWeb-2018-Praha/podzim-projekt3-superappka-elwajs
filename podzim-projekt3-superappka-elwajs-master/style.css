@@ -1,0 +1,187 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/*
+ BARVY
+ sede pozadi      #e5e5e5
+ svetle fialova   #48418e
+ tmave fialova    #25133d
+
+ POUZITE PISMO
+ Source Sans Pro - rezy pisma light 300, regular 400 a bold 700
+ https://fonts.google.com/specimen/Roboto
+*/
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #e5e5e5;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.obal {
+    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
+    margin: 0 auto; /* pruh je na stránce vycentrovaný */
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- zde začni psát vlastní CSS ----- */
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: stretch;
+	flex: 1 1 100%;
+	padding: 10px;
+	margin: 1px;
+    list-style: none;
+}
+
+.hlavni {
+    padding: 25px;
+    color: black;
+    text-decoration: none;
+    padding: 30px;
+    font-size: 17px;
+    }
+
+.tucne {
+    font-weight: bold;
+}
+
+.blok {
+    margin: 0;
+    padding: 0;
+}
+
+.horni {
+    background-image: url("images/pozadi.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    height: 400px;
+}
+
+.horni_levy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    color: white;
+}
+
+.nadpis {
+    margin: 0;
+    padding: 0;
+    font-size: 90px;
+    font-weight: 400;
+}
+
+.popis {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.akce {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.tlacitko {
+    background-color: transparent;
+    border: white 1px solid;
+    border-radius: 5px;
+    color: white;
+    padding: 13px 30px;
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+    margin-left: 15px;
+    box-shadow: 1px 1px 3px grey;
+}
+
+.tlacitko:hover {
+    background-color:#48418e;
+}
+
+.telefon {
+    align-self: flex-end;
+    height: 350px;
+
+}
+
+.dolni {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    color: #48418e;
+}
+
+.prvni,
+.druhy,
+.treti {
+	flex: 1 1 calc(100% / 3);
+}
+
+.prvni {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: flex-start;
+    padding-right: 30px
+}
+
+.druhy {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: flex-start;
+}
+
+.treti {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: flex-start;
+    padding-left: 30px;
+}
+
+.obrazek_sloupec {
+    height: 60px;
+}
+
+.paticka {
+    margin: 0;
+    padding: 0;
+    background-color: #48418e;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    font-size: 12px;
+}
